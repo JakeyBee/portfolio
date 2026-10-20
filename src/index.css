@@ -1,0 +1,81 @@
+:root {
+  /* colors defined once, used everywhere below */
+  --bg: #0f0b1e;
+  --surface: #1a1430;
+  --text: #ece8f6;
+  --muted: #a99fc4;
+  --purple: #a855f7;
+  --teal: #2dd4bf;
+  --border: #2e2650;
+
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body { margin: 0; min-height: 100vh; }
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--text); }
+nav a.active { color: var(--teal); font-weight: 600; }
+
+main { max-width: 800px; margin: 0 auto; padding: 2rem; }
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  /* paint a gradient, then show it only through the letters */
+  background: linear-gradient(90deg, var(--purple), var(--teal));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 { color: var(--purple); }
+a  { color: var(--teal); }
+
+.tagline { font-size: 1.25rem; color: var(--muted); margin-top: 0; }
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background: var(--surface);
+  border: 1px solid var(--purple);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.skills li:hover { border-color: var(--teal); color: var(--teal); }
+
+.certs { list-style: none; padding: 0; }
+
+.certs li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.certs li::before { content: "✓ "; color: var(--teal); }  /* teal checkmark */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;     /* space between cards later */
+}
+
+.card h2 { margin-top: 0; }
