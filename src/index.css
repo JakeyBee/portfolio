@@ -27,16 +27,30 @@ nav a { color: var(--muted); text-decoration: none; }
 nav a:hover { color: var(--text); }
 nav a.active { color: var(--teal); font-weight: 600; }
 
+nav { align-items: center; }
+
+nav .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+nav .brand .burn { color: var(--teal); }
+nav .brand .byte { color: var(--purple); }
+
 main { max-width: 800px; margin: 0 auto; padding: 2rem; }
 
 h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  /* paint a gradient, then show it only through the letters */
   background: linear-gradient(90deg, var(--purple), var(--teal));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  width: fit-content;
 }
 
 h2 { color: var(--purple); }
@@ -79,3 +93,5 @@ a  { color: var(--teal); }
 }
 
 .card h2 { margin-top: 0; }
+
+.links { display: flex; gap: 1rem; margin-bottom: 0; }
